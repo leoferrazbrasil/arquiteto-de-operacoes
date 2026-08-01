@@ -1,0 +1,43 @@
+{
+  "professional": {
+    "required": [
+      "nome",
+      "email",
+      "whatsapp",
+      "consentimento"
+    ],
+    "fields": [
+      "linkedin",
+      "ocupacao",
+      "experiencia",
+      "nivel_autodeclarado",
+      "mensagem"
+    ]
+  },
+  "company": {
+    "required": [
+      "nome",
+      "email",
+      "whatsapp",
+      "consentimento"
+    ],
+    "fields": [
+      "linkedin",
+      "empresa",
+      "estagio_empresa",
+      "gargalo",
+      "mensagem"
+    ]
+  },
+  "metadata": [
+    "tipo",
+    "criado_em",
+    "origem",
+    "contexto_marca",
+    "versao_marca",
+    "url",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign"
+  ]
+}
