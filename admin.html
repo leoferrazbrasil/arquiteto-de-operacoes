@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Respostas locais — Arquiteto de Operações</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" data-elevated="true"><div class="container header-inner"><a class="brand" href="index.html"><img class="brand-mark" src="assets/logo-mark.svg" alt="" /><span class="brand-copy"><strong>Arquiteto de Operações</strong><small>Respostas locais de demonstração</small></span></a><nav class="nav-primary"><a href="index.html">Landing page</a><a href="styleguide.html">Guia visual</a></nav></div></header>
+  <main class="admin-main">
+    <div class="container">
+      <span class="eyebrow">Painel de demonstração</span>
+      <h1>Respostas locais</h1>
+      <p class="lead">Estes dados existem apenas neste navegador. Em produção, o formulário deve enviar para API, banco de dados e CRM.</p>
+      <div class="admin-toolbar"><button class="button button-primary" id="export-json">Exportar JSON</button><button class="button button-secondary" id="export-csv">Exportar CSV</button><button class="button button-ghost" id="clear-data">Limpar dados</button></div>
+      <div class="admin-table-wrap" id="table-wrap"></div>
+    </div>
+  </main>
+  <script src="config.js"></script>
+  <script>
+    const key = window.ADO_CONFIG?.storageKey || window.AO_CONFIG?.storageKey || 'ado_interesses_v011';
+    const wrap = document.getElementById('table-wrap');
+    function records(){ return JSON.parse(localStorage.getItem(key) || '[]'); }
+    function render(){
+      const rows = records();
+      if(!rows.length){ wrap.innerHTML = '<div class="empty-state">Nenhuma resposta local registrada ainda.</div>'; return; }
+      const cols = ['criado_em','tipo','nome','email','whatsapp','ocupacao','empresa','experiencia','nivel_autodeclarado','estagio_empresa','gargalo','mensagem'];
+      wrap.innerHTML = '<table><thead><tr>'+cols.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+cols.map(c=>`<td>${String(r[c]||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]))}</td>`).join('')+'</tr>').join('')+'</tbody></table>';
+    }
+    function download(name, text, type){ const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([text],{type})); a.download=name; a.click(); URL.revokeObjectURL(a.href); }
+    document.getElementById('export-json').onclick=()=>download('ado-respostas-v011.json',JSON.stringify(records(),null,2),'application/json');
+    document.getElementById('export-csv').onclick=()=>{ const rows=records(); if(!rows.length)return; const cols=[...new Set(rows.flatMap(r=>Object.keys(r)))]; const esc=v=>'"'+String(v??'').replaceAll('"','""')+'"'; const csv=[cols.map(esc).join(','),...rows.map(r=>cols.map(c=>esc(r[c])).join(','))].join('\n'); download('ado-respostas-v011.csv',csv,'text/csv;charset=utf-8'); };
+    document.getElementById('clear-data').onclick=()=>{ if(confirm('Apagar todas as respostas locais?')){localStorage.removeItem(key);render();} };
+    render();
+  </script>
+</body>
+</html>
