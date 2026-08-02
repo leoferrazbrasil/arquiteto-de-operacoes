@@ -1,8 +1,8 @@
-# Design System Fundador — Arquiteto de Operações v0.1.1
+# Design System Fundador — Arquiteto de Operações v0.2.0
 
 ## 1. Função desta versão
 
-A v0.1.1 corrige a hierarquia estratégica do sistema sem descartar a fundação visual e técnica da v0.1.
+A v0.2.0 preserva a hierarquia estratégica corrigida na v0.1.1 e oficializa o símbolo H5.2-A, sem alterar paleta, tipografia, componentes, formulários, domínio ou integrações.
 
 O sistema existe para sustentar o lançamento e o desenvolvimento de uma nova categoria profissional: **Arquiteto de Operações**.
 
@@ -75,9 +75,38 @@ A marca não deve parecer:
 
 ## 10. Direção visual
 
-O sistema visual nasce de módulos, caminhos, camadas e pontos de conexão. A geometria deve comunicar integração e progressão, não arquitetura civil literal.
+O sistema visual comunica integração e progressão por meio de geometria clara, contraste e leitura operacional. A geometria não deve sugerir arquitetura civil literal.
 
-O símbolo atual é uma **hipótese fundadora**. Ele representa capacidades diferentes conectadas por uma lógica central. Deve ser refinado na v0.2, não tratado como definitivo.
+### Símbolo oficial H5.2-A — Contraforma Aberta e Geométrica
+
+H5.2-A é o símbolo aprovado do sistema nesta versão. Sua construção é um disco sólido com contraforma aberta, simétrica e sem barra transversal:
+
+- viewBox principal `0 0 48 48`;
+- disco `cx=24`, `cy=24`, `r=20`;
+- contraforma `M10.5 35 L24 9.5 L37.5 35`;
+- traço `4.6`, terminações `butt` e junções `miter`;
+- versão óptica de 16 px: `r=21`, traço `6.4`, contraforma `M8.5 36 L24 8 L39.5 36`;
+- versão óptica de 24 px: `r=20.5`, traço `5.7`, contraforma `M9.5 35.5 L24 8.5 L38.5 35.5`;
+- proteção mínima `X=4u`, onde `u` é a unidade do viewBox 48;
+- tamanho mínimo isolado: 16 px com a variante óptica; com nome, 24 px; abaixo de 16 px, não utilizar.
+
+O símbolo deve conservar o centro óptico dentro do disco, a abertura inferior e a distinção em relação a seta, montanha, telhado e A convencional. A versão principal é usada a partir de 48 px; a variante óptica de 16 px é obrigatória em favicon e microescala, e a de 24 px é usada quando necessária.
+
+### Aplicações e restrições
+
+- positivo: disco `Ink 950` `#07111F` e contraforma `Paper 50` `#F7F8F6`;
+- negativo: disco `Paper 50` `#F7F8F6` e contraforma `Ink 950` `#07111F`;
+- monocromático: preto `#000000` e branco `#FFFFFF`;
+- assinaturas horizontais preservam a tipografia e o espaçamento existentes;
+- avatar, selo e demais molduras são contextos de aplicação, não partes do símbolo;
+- não alterar ângulos, abertura, peso, proporções ou terminações;
+- não adicionar barra, badge, anel, moldura, módulo externo, sombra no SVG, gradiente, terminal arredondado, segunda marca, rotação ou distorção;
+- não usar a versão principal abaixo de 48 px quando houver variante óptica correspondente;
+- não invadir a área de proteção.
+
+As aplicações oficiais e os SVGs finais estão em `assets/brand/h5-2-a/`. O arquivo `h5-2-a-final-technical-finish.html` registra construção, versões, aplicações, área de proteção, tamanho mínimo e usos incorretos.
+
+As hipóteses H5.2-B — contraforma assimétrica e proprietária — e H5.2-C — contraforma compacta e institucional — foram exploradas e descartadas. Permanecem apenas como histórico de decisão; não devem ser combinadas com H5.2-A nem substituir seus assets.
 
 ### Evitar
 
@@ -142,6 +171,6 @@ A categoria não deve ser anunciada como invenção arbitrária. Deve ser aprese
 
 - v0.1: fundação visual inicial;
 - **v0.1.1: reorientação estratégica da hierarquia**;
-- v0.2: exploração visual e aplicações reais;
+- **v0.2.0: H5.2-A oficial, variantes ópticas e aplicações reais**;
 - v0.5: sistema para conteúdo, comunidade e formação;
 - v1.0: marca institucional consolidada, currículo, certificação e diretório profissional.

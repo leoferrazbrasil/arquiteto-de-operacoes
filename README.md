@@ -12,9 +12,9 @@ Design System fundador e infraestrutura digital da categoria profissional **Arqu
 
 ## Versão atual
 
-**Design System Fundador v0.1.1 — Reorientação Estratégica**
+**Design System Fundador v0.2.0 — H5.2-A oficial**
 
-Esta versão reposiciona a profissão como centro da narrativa, preservando Arquitetura Operacional como a disciplina que sustenta a prática e Operação Previsível como o resultado entregue.
+Esta versão preserva a hierarquia estratégica e oficializa o símbolo H5.2-A — Contraforma Aberta e Geométrica, com variantes ópticas para 16 px e 24 px.
 
 ## Arquivos principais
 
@@ -26,6 +26,7 @@ Esta versão reposiciona a profissão como centro da narrativa, preservando Arqu
 - `API_CONTRACT.md` — contrato inicial para formulários e integrações
 - `admin.html` — visualização local dos registros
 - `privacy.html` — política de privacidade inicial
+- `assets/brand/h5-2-a/` — pacote canônico do símbolo aprovado e ficha técnica
 
 ## Execução local
 
@@ -37,15 +38,11 @@ python3 -m http.server 8080
 
 Depois acesse `http://localhost:8080`.
 
-## Próxima etapa
+## Estado da marca
 
-A branch `explore/design-system-v0.2` será usada para explorar três direções visuais no Claude Design:
+H5.2-A — Contraforma Aberta e Geométrica — é o símbolo oficialmente aprovado para esta versão. H5.2-B e H5.2-C permanecem registradas como hipóteses exploradas e descartadas; não fazem parte dos assets oficiais.
 
-- Arquitetura Sistêmica
-- Inteligência Operacional
-- Movimento Profissional
-
-A fundação em `main` deve permanecer estável enquanto as alternativas são avaliadas.
+O pacote canônico preserva disco sólido, contraforma aberta, simetria estrutural, funcionamento monocromático, positivo/negativo e leitura real em 16 px. Não há badge, módulo externo, gradiente ou segunda marca.
 
 ## Princípio central
 

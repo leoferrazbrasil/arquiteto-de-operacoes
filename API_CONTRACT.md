@@ -1,4 +1,4 @@
-# Contrato de integração dos formulários — v0.1.1
+# Contrato de integração dos formulários — v0.2.0
 
 ## Endpoint sugerido
 
@@ -24,7 +24,7 @@
   "criado_em": "ISO-8601",
   "origem": "arquiteto_operacoes_landing",
   "contexto_marca": "categoria_profissional",
-  "versao_marca": "0.1.1",
+  "versao_marca": "0.2.0",
   "url": "string",
   "utm_source": "string",
   "utm_medium": "string",
@@ -60,7 +60,7 @@ window.ADO_CONFIG = {
   mode: "production",
   endpoint: "https://seu-dominio.com/api/interesses",
   storageKey: "ado_interesses_v011",
-  brandVersion: "0.1.1",
+  brandVersion: "0.2.0",
   analytics: true
 };
 ```
