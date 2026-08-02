@@ -38,6 +38,12 @@ python3 -m http.server 8080
 
 Depois acesse `http://localhost:8080`.
 
+Para executar a validação estática mínima do repositório:
+
+```bash
+npm test
+```
+
 ## Estado da marca
 
 H5.2-A — Contraforma Aberta e Geométrica — é o símbolo oficialmente aprovado para esta versão. H5.2-B e H5.2-C permanecem registradas como hipóteses exploradas e descartadas; não fazem parte dos assets oficiais.

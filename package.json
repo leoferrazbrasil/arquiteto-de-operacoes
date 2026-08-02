@@ -1,0 +1,9 @@
+{
+  "name": "arquiteto-de-operacoes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node scripts/verify.mjs",
+    "test": "npm run verify"
+  }
+}
