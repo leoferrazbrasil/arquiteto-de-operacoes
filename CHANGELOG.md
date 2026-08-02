@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.0 — Fundação Editorial aprovada
+
+### Aprovado
+
+- taxonomia canônica de definição oficial, fato documentado, tese institucional, hipótese, opinião fundadora, proposta e recomendação;
+- duas jornadas editoriais, profissional e empresarial, com próximas ações distintas;
+- arquitetura editorial de públicos, pilares, níveis de consciência, formatos, canais e campanhas;
+- fluxo canônico `draft` → `review` → `approved` → `designed` → `scheduled` → `published`;
+- governança de aprovação editorial, factual e visual por estado;
+- metadados rastreáveis para afirmações, fontes, evidências, aprovações e publicação;
+- campanha inaugural das três publicações fixadas, liberada para redação;
+- URL, CTAs e especificações visuais preservados como gates operacionais posteriores, sem bloqueio da aprovação editorial.
+
 ## v0.2.0 — Símbolo oficial H5.2-A
 
 ### Alterado

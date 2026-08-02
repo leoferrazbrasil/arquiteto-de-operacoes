@@ -7,9 +7,26 @@ registro de conteúdos oficiais do projeto Arquiteto de Operações. Ela separa
 referências permanentes, campanhas, modelos de produção, conteúdos
 publicados, backlog, dados de performance e assets.
 
-Nenhum fundamento editorial é definido nesta inicialização. Os arquivos de
-`00-foundations/` e os modelos de `02-templates/` contêm apenas a estrutura
-necessária para preenchimento posterior.
+## Fundação Editorial v1.0.0
+
+- **Status:** `approved`
+- **Data de aprovação:** `2026-08-02`
+- **Autoridade editorial:** Leonardo Brasil
+- **Autoridade factual:** Leonardo Brasil
+
+Os cinco arquivos abaixo formam a fonte canônica da Fundação Editorial:
+
+- `00-foundations/brand-foundation.md`
+- `00-foundations/voice-and-language.md`
+- `00-foundations/editorial-architecture.md`
+- `00-foundations/content-production-guide.md`
+- `00-foundations/thesis-and-proof-library.md`
+
+A campanha inaugural das três publicações fixadas está liberada para redação.
+URL, CTAs e especificações visuais permanecem como gates operacionais
+posteriores: não bloqueiam a aprovação editorial. URL e CTAs devem ser
+validados antes de `scheduled`; especificações visuais devem ser confirmadas
+antes da composição e da aprovação visual no estado `designed`.
 
 ## Estrutura
 
@@ -52,6 +69,8 @@ texto depois do design retorna para revisão editorial e gera uma nova versão.
 ## Estados de um conteúdo
 
 Os estados oficiais são:
+
+`draft` → `review` → `approved` → `designed` → `scheduled` → `published`
 
 | Estado | Significado |
 | --- | --- |
