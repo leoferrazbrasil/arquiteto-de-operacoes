@@ -22,11 +22,20 @@ Os cinco arquivos abaixo formam a fonte canônica da Fundação Editorial:
 - `00-foundations/content-production-guide.md`
 - `00-foundations/thesis-and-proof-library.md`
 
-A campanha inaugural das três publicações fixadas está liberada para redação.
-URL, CTAs e especificações visuais permanecem como gates operacionais
-posteriores: não bloqueiam a aprovação editorial. URL e CTAs devem ser
-validados antes de `scheduled`; especificações visuais devem ser confirmadas
-antes da composição e da aprovação visual no estado `designed`.
+## Briefing da campanha inaugural v1.0.0
+
+- **Status:** `approved`
+- **Caminho canônico:** `01-campaigns/2026-08-02--pinned-posts-inaugural.md`
+- **Data de aprovação:** `2026-08-02`
+- **Autoridade editorial:** Leonardo Brasil
+- **Autoridade factual:** Leonardo Brasil
+
+Os três carrosséis estão liberados para redação, mas suas peças individuais
+permanecem em `draft` e `v01`. Roteiros, legendas e assets ainda não estão
+aprovados. URL, CTAs e especificações visuais permanecem como gates
+operacionais posteriores: não bloqueiam a aprovação editorial. URL e CTAs
+devem ser validados antes de `scheduled`; especificações visuais devem ser
+confirmadas antes da composição e da aprovação visual no estado `designed`.
 
 ## Estrutura
 

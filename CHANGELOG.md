@@ -1,5 +1,17 @@
 # Changelog
 
+## Campaign Brief v1.0.0 — campanha inaugural
+
+### Aprovado
+
+- sequência das três publicações fixadas: “Uma nova profissão está emergindo”, “O que faz um Arquiteto de Operações” e “Profissionais e empresas: as duas jornadas”;
+- progressão narrativa mudança → profissão → caminhos;
+- claims estruturados e classificados para cada publicação;
+- título “Uma nova profissão está emergindo” classificado como tese institucional (`institutional_thesis`) independente;
+- jornadas profissional e empresarial separadas, equivalentes e complementares;
+- campanha e três carrosséis liberados para redação, mantendo as futuras peças em `draft` e `v01`;
+- URL, CTAs, especificações visuais, assets e aprovação visual preservados como gates operacionais posteriores.
+
 ## v1.0.0 — Fundação Editorial aprovada
 
 ### Aprovado
