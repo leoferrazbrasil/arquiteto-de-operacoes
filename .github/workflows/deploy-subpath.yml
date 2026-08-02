@@ -45,5 +45,7 @@ jobs:
           local-dir: .deploy/
           server-dir: ./
           state-name: .ftp-deploy-sync-state.json
-          security: strict
+          # Hostinger's FTP hostname currently serves a valid *.hstgr.io
+          # certificate whose name does not include the custom FTP hostname.
+          security: loose
           log-level: minimal
