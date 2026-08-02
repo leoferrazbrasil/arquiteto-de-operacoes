@@ -88,7 +88,7 @@ function checkSvgXml(svgDirectory) {
   const command = `$files=Get-ChildItem -LiteralPath '${svgDirectory.replaceAll("'", "''")}' -Recurse -Filter *.svg; foreach($file in $files){[xml](Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8)|Out-Null}`;
   const result = process.platform === 'win32'
     ? spawnSync('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', command], { encoding: 'utf8' })
-    : spawnSync('python3', ['-c', 'import pathlib, sys, xml.etree.ElementTree as ET; [ET.parse(p) for p in pathlib.Path(sys.argv[1]).rglob("*.svg")]'], { encoding: 'utf8', env: process.env, input: undefined });
+    : spawnSync('python3', ['-c', 'import pathlib, sys, xml.etree.ElementTree as ET; [ET.parse(p) for p in pathlib.Path(sys.argv[1]).rglob("*.svg")]', svgDirectory], { encoding: 'utf8', env: process.env, input: undefined });
   if (result.status !== 0) fail(`SVG XML validation failed${result.stderr ? `: ${result.stderr.trim()}` : ''}`);
 }
 
