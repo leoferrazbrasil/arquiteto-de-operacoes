@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="design_doc_mode" content="canvas">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>H5.2-A — Acabamento técnico final</title>
+  <style>
+    :root{--ink:#07111F;--ink800:#13243A;--ink700:#20354F;--signal:#1EC9B7;--signal600:#12A899;--paper:#F7F8F6;--cloud:#E9EEF2;--slate:#64748B;--line:#D9E0E6;--warning:#F59E0B}
+    *{box-sizing:border-box}html{background:#1c2430}body{margin:0;background:#1c2430;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    .canvas{width:3720px;padding:60px 40px 100px}.top{width:3640px;padding:32px 44px;border-radius:12px;background:#0d1420;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+    .eyebrow,.label,.metric,.file{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;text-transform:uppercase;letter-spacing:.07em}.eyebrow{color:#5b7ca3;font-size:11px}.top h1{margin:10px 0 0;font-size:29px;line-height:1.05;letter-spacing:-.045em}.top p{max-width:1600px;margin:10px 0 0;color:#94a3b8;font-size:13px;line-height:1.6}.top strong{color:#fff}.nav{display:flex;gap:8px;margin-top:18px}.nav a{padding:8px 12px;border:1px solid rgba(255,255,255,.16);border-radius:8px;color:#fff;text-decoration:none;font-size:12px;font-weight:700}.nav a:last-child{border-color:var(--signal);color:var(--signal)}
+    .status{display:flex;align-items:center;justify-content:space-between;gap:30px;width:3640px;margin:24px 0;padding:18px 24px;border:1px solid rgba(30,201,183,.38);border-radius:12px;background:#12243A;color:#fff}.status strong{color:var(--signal);font:11px "SFMono-Regular",Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}.status span{color:#B7C3D0;font-size:12px}
+    .section{width:3640px;margin-top:24px;padding:34px 38px;border-radius:12px;background:var(--paper);box-shadow:0 30px 80px rgba(0,0,0,.22)}.section h2{margin:8px 0 0;font-size:24px;line-height:1.05;letter-spacing:-.04em}.section-intro{margin:8px 0 0;color:var(--slate);font-size:12px;line-height:1.55}.section-intro strong{color:var(--ink)}
+    .construction{display:grid;grid-template-columns:720px 1fr;gap:34px;margin-top:24px}.construction-plate{padding:28px;border:1px solid var(--line);border-radius:12px;background:#fff}.construction-plate svg{width:620px;height:620px;display:block}.construction-notes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-content:start}.note{padding:16px;border:1px solid var(--line);border-radius:10px;background:#fff}.note strong{display:block;font-size:13px}.note span{display:block;margin-top:6px;color:var(--slate);font-size:11px;line-height:1.5}.note .metric{color:var(--signal600);font-size:10px}
+    .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.proof{padding:22px;border:1px solid var(--line);border-radius:12px;background:#fff}.proof.dark{background:var(--ink);border-color:var(--ink);color:#fff}.proof h3{margin:0;font-size:15px;letter-spacing:-.02em}.proof p{margin:7px 0 0;color:var(--slate);font-size:11px;line-height:1.5}.proof.dark p{color:#B7C3D0}.visual{display:flex;align-items:center;gap:18px;min-height:130px;margin-top:16px}.visual.center{justify-content:center}.visual.column{flex-direction:column;align-items:flex-start}.visual img{display:block;max-width:none}.caption{color:var(--slate);font:10px "SFMono-Regular",Consolas,monospace;letter-spacing:.04em}.proof.dark .caption{color:#B7C3D0}
+    .native16{display:flex;align-items:center;gap:18px}.native16 .tab{display:flex;align-items:center;gap:8px;padding:11px 14px;border-radius:8px 8px 0 0;background:#fff;color:#3c4043;box-shadow:0 8px 18px rgba(7,17,31,.14);font-size:11px}.native16 .tab.dark{background:#2b2f36;color:#e8eaed}.native16 .actual{width:16px;height:16px;flex:0 0 16px}.native16 .actual img{width:16px;height:16px}.real-sizes{display:flex;align-items:flex-end;gap:28px}.real-size{display:grid;justify-items:center;gap:8px;color:var(--slate);font:10px "SFMono-Regular",Consolas,monospace}.real-size img{max-width:none}
+    .signature{display:flex;align-items:center;gap:14px;margin-top:14px;padding:17px 20px;border:1px solid var(--line);border-radius:10px;background:#fff}.signature img{width:40px;height:40px}.signature-copy{padding-left:14px;border-left:1px solid var(--line)}.signature-copy strong{display:block;font-size:17px;letter-spacing:-.025em}.signature-copy span{display:block;margin-top:4px;color:var(--slate);font:9px "SFMono-Regular",Consolas,monospace;letter-spacing:.06em}
+    .avatar-row,.seal-row{display:flex;align-items:center;gap:20px}.avatar{display:grid;place-items:center;width:92px;height:92px;border-radius:50%;background:var(--ink)}.avatar.light{background:var(--signal)}.avatar.small{width:48px;height:48px}.avatar img{max-width:none}.seal{display:flex;flex-direction:column;align-items:center;justify-content:center;width:122px;height:122px;border:2px solid var(--ink);border-radius:50%;background:#fff}.seal.dark{border-color:#fff;background:var(--ink)}.seal img{width:46px;height:46px}.seal span{margin-top:7px;color:var(--signal600);font:8px "SFMono-Regular",Consolas,monospace;letter-spacing:.1em}.seal.dark span{color:var(--signal)}
+    .protection{display:flex;align-items:center;gap:32px}.protection svg{width:260px;height:260px;border:1px solid var(--line);background:#fff}.protection p{max-width:460px;color:var(--slate);font-size:12px;line-height:1.6}.protection strong{color:var(--ink)}
+    .minimum{display:flex;align-items:center;gap:34px}.minimum-card{display:grid;justify-items:center;gap:10px;padding:20px 28px;border:1px solid var(--line);border-radius:10px;background:#fff}.minimum-card img{max-width:none}.minimum-card span{color:var(--slate);font:10px "SFMono-Regular",Consolas,monospace}.minimum-copy{max-width:460px;color:var(--slate);font-size:12px;line-height:1.6}.minimum-copy strong{color:var(--ink)}
+    .incorrect-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}.incorrect{min-height:170px;padding:16px;border:1px solid rgba(245,158,11,.55);border-top:3px solid var(--warning);border-radius:10px;background:#fff}.incorrect svg{width:82px;height:82px;display:block;margin:auto}.incorrect strong{display:block;margin-top:12px;color:var(--ink);font-size:11px}.incorrect span{display:block;margin-top:4px;color:var(--slate);font-size:10px;line-height:1.4}
+    .files{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.file{display:block;padding:13px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink700);font-size:10px;text-decoration:none;line-height:1.4}.file:hover{border-color:var(--signal);color:var(--signal600)}
+    .recommendation{margin-top:18px;padding:18px 20px;border-left:4px solid var(--signal);border-radius:0 10px 10px 0;background:#12243A;color:#fff}.recommendation strong{display:block;color:var(--signal);font:11px "SFMono-Regular",Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}.recommendation span{display:block;margin-top:7px;color:#B7C3D0;font-size:12px;line-height:1.55}.recommendation b{color:#fff}
+    .footer{width:3640px;margin-top:24px;padding:22px 28px;border-radius:12px;background:#0d1420;color:#94a3b8;font:10px "SFMono-Regular",Consolas,monospace;letter-spacing:.04em}.footer strong{color:var(--signal)}
+  </style>
+</head>
+<body>
+  <main class="canvas">
+    <header class="top">
+      <div class="eyebrow">H5.2-A · Contraforma Aberta e Geométrica · acabamento técnico</div>
+      <h1>Solução final para aprovação</h1>
+      <p>A única base desta etapa é H5.2-A. O acabamento ajusta posição óptica, abertura, terminações, peso e centro dentro do disco; não introduz hipótese nova, módulo externo, badge, anel segmentado ou gradiente.</p>
+      <nav class="nav"><a href="#construction">Construção</a><a href="#proof">Versões e aplicações</a><a href="#technical">Proteção e mínimo</a><a href="#files">SVGs finais</a></nav>
+    </header>
+
+    <div class="status"><strong>Estado · aprovado e integrado</strong><span>H5.2-A é o símbolo oficial do Design System v0.2.0. Esta ficha técnica registra as regras de uso; a publicação do Design System depende da revisão do repositório.</span></div>
+
+    <section id="construction" class="section">
+      <div class="eyebrow">01 · construção geométrica final</div>
+      <h2>Disco sólido, vazio aberto, eixo estrutural simétrico</h2>
+      <p class="section-intro">A forma principal permanece centrada no viewBox 48 × 48. A contraforma não possui barra transversal, módulo externo ou elemento separado.</p>
+      <div class="construction">
+        <div class="construction-plate">
+          <svg viewBox="0 0 48 48" role="img" aria-label="Construção geométrica H5.2-A">
+            <rect width="48" height="48" fill="#FFFFFF"/>
+            <path d="M4 0V48M8 0V48M12 0V48M16 0V48M20 0V48M24 0V48M28 0V48M32 0V48M36 0V48M40 0V48M44 0V48M0 4H48M0 8H48M0 12H48M0 16H48M0 20H48M0 24H48M0 28H48M0 32H48M0 36H48M0 40H48M0 44H48" stroke="#E9EEF2" stroke-width=".35"/>
+            <circle cx="24" cy="24" r="20" fill="#07111F"/>
+            <path d="M10.5 35L24 9.5L37.5 35" stroke="#F7F8F6" stroke-width="4.6" stroke-linecap="butt" stroke-linejoin="miter"/>
+            <path d="M24 4V44M4 24H44" stroke="#1EC9B7" stroke-width=".5" stroke-dasharray="1.5 1.5"/>
+            <circle cx="24" cy="9.5" r="1.1" fill="#1EC9B7"/>
+            <text x="25.2" y="8" fill="#12A899" font-family="monospace" font-size="2.1">ápice x=24</text>
+            <text x="10" y="39.5" fill="#12A899" font-family="monospace" font-size="2.1">abertura 27u</text>
+          </svg>
+        </div>
+        <div class="construction-notes">
+          <div class="note"><div class="metric">Disco</div><strong>r = 20u</strong><span>Massa sólida contínua, sem anel, corte ou módulo fora do disco.</span></div>
+          <div class="note"><div class="metric">Ápice</div><strong>x = 24u · y = 9,5u</strong><span>Alinhado ao eixo vertical para manter simetria estrutural; a posição óptica permanece levemente alta.</span></div>
+          <div class="note"><div class="metric">Abertura</div><strong>27u entre terminações</strong><span>Base aberta o bastante para preservar o vazio sem transformar a forma em seta ou telhado.</span></div>
+          <div class="note"><div class="metric">Peso</div><strong>4,6u · terminações butt</strong><span>Hastes firmes, sem arredondamento que suavize a geometria ou crie aparência de ícone genérico.</span></div>
+          <div class="note"><div class="metric">Centro óptico</div><strong>massa e vazio equilibrados</strong><span>O vazio é amplo e legível, mas não atravessa o disco nem se torna um A convencional.</span></div>
+          <div class="note"><div class="metric">Distinção</div><strong>sem barra transversal</strong><span>Não é seta, montanha, telhado ou letra: é uma contraforma aberta contida em uma massa circular.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="section">
+      <div class="eyebrow">02–10 · versões e aplicações</div>
+      <h2>Correspondência técnica entre principal, óptica e usos</h2>
+      <p class="section-intro">A versão óptica altera apenas peso, raio e clearance para sobreviver em 16 px e 24 px. A lógica da contraforma permanece a mesma.</p>
+      <div class="proof-grid">
+        <article class="proof"><h3>2 · Versão principal</h3><p>Construção-base para 48 px e aplicações ampliadas.</p><div class="visual center"><img src="h5-2-a-primary-positive.svg" width="128" height="128" alt="H5.2-A principal positiva"></div><div class="caption">48u · r20 · stroke4,6</div></article>
+        <article class="proof"><h3>3 · Variante óptica de 16 px</h3><p>Favicon e microescala. O peso sobe; o conceito não muda.</p><div class="visual"><div><img src="h5-2-a-optical-16-positive.svg" width="16" height="16" alt="H5.2-A óptica positiva em 16 px"><div class="caption">16px real</div></div><div><img src="h5-2-a-optical-16-positive.svg" width="128" height="128" alt="H5.2-A óptica ampliada para inspeção"><div class="caption">inspeção 8×</div></div></div></article>
+        <article class="proof"><h3>4 · Variante óptica de 24 px</h3><p>Necessária para manter o mesmo equilíbrio entre 16 e 32 px.</p><div class="visual"><div><img src="h5-2-a-optical-24-positive.svg" width="24" height="24" alt="H5.2-A óptica positiva em 24 px"><div class="caption">24px real</div></div><div><img src="h5-2-a-optical-24-positive.svg" width="120" height="120" alt="H5.2-A óptica ampliada para inspeção"><div class="caption">inspeção 5×</div></div></div></article>
+        <article class="proof"><h3>5 · Positivo e negativo</h3><p>O disco sólido permanece presente nos dois campos.</p><div class="visual"><img src="h5-2-a-primary-positive.svg" width="72" height="72" alt="Positivo"><img src="h5-2-a-primary-negative.svg" width="72" height="72" alt="Negativo" style="background:#20354F;border-radius:50%"></div></article>
+        <article class="proof dark"><h3>6 · Monocromático</h3><p>Sem Signal, Blueprint ou qualquer dependência cromática.</p><div class="visual center"><img src="h5-2-a-monochrome.svg" width="96" height="96" alt="H5.2-A monocromático"></div></article>
+        <article class="proof"><h3>7 · Favicon</h3><p>A leitura começa no tamanho real, não na ampliação.</p><div class="native16"><div class="tab"><span class="actual"><img src="h5-2-a-favicon-16.svg" alt="Favicon H5.2-A"></span><span>Arquiteto de Operações</span></div><div><img src="h5-2-a-favicon-16.svg" width="96" height="96" alt="Favicon ampliado"><div class="caption">inspeção</div></div></div></article>
+        <article class="proof"><h3>8 · Assinatura horizontal</h3><p>Categoria profissional primeiro; símbolo como assinatura.</p><div class="signature"><img src="h5-2-a-primary-positive.svg" alt="H5.2-A"><div class="signature-copy"><strong>Arquiteto de Operações</strong><span>NOVA CATEGORIA PROFISSIONAL · POR LEONARDO BRASIL</span></div></div></article>
+        <article class="proof"><h3>9 · Avatar de perfil</h3><p>O círculo de perfil é contexto de uso, não parte do símbolo.</p><div class="visual"><div class="avatar"><img src="h5-2-a-primary-negative.svg" width="58" height="58" alt="Avatar positivo"></div><div class="avatar light"><img src="h5-2-a-primary-positive.svg" width="58" height="58" alt="Avatar em Signal"></div><div class="avatar small"><img src="h5-2-a-optical-16-negative.svg" width="24" height="24" alt="Avatar óptico"></div></div></article>
+        <article class="proof"><h3>10 · Selo profissional</h3><p>Uma moldura simples pode existir na aplicação; não integra a marca.</p><div class="seal-row"><div class="seal"><img src="h5-2-a-primary-positive.svg" alt="Selo claro"><span>NÍVEL 03</span></div><div class="seal dark"><img src="h5-2-a-primary-negative.svg" alt="Selo escuro"><span>CERTIFICADO</span></div></div></article>
+      </div>
+    </section>
+
+    <section id="technical" class="section">
+      <div class="eyebrow">11–13 · regras técnicas</div>
+      <h2>Área de proteção, tamanho mínimo e usos incorretos</h2>
+      <div class="proof-grid" style="grid-template-columns:1fr 1fr;margin-top:24px">
+        <article class="proof"><h3>11 · Área de proteção</h3><p>Usar X = 4u como campo mínimo ao redor do disco. Nenhum texto, borda ou ícone entra nesse campo.</p><div class="protection"><svg viewBox="0 0 48 48" role="img" aria-label="Área de proteção de quatro unidades"><rect width="48" height="48" fill="#FFFFFF"/><rect x="0" y="0" width="48" height="48" fill="none" stroke="#1EC9B7" stroke-width=".55" stroke-dasharray="1.5 1.5"/><circle cx="24" cy="24" r="20" fill="#07111F"/><path d="M10.5 35L24 9.5L37.5 35" stroke="#F7F8F6" stroke-width="4.6" stroke-linecap="butt" stroke-linejoin="miter"/><path d="M4 1V47M1 4H47" stroke="#12A899" stroke-width=".45" stroke-dasharray="1 1"/><text x="5" y="3" fill="#12A899" font-family="monospace" font-size="2.2">X=4u</text></svg><p><strong>Campo livre mínimo:</strong> quatro unidades do viewBox 48. A proteção é espaço de respiro, não um anel visível do símbolo.</p></div></article>
+        <article class="proof"><h3>12 · Tamanho mínimo</h3><p>Regra validada nesta etapa: 16 px apenas com a variante óptica; 24 px ou mais para aplicações com nome.</p><div class="minimum"><div class="minimum-card"><img src="h5-2-a-favicon-16.svg" alt="Mínimo 16 px"><span>16px · favicon</span></div><div class="minimum-card"><img src="h5-2-a-optical-24-positive.svg" width="24" height="24" alt="Mínimo 24 px"><span>24px · aplicação</span></div><p class="minimum-copy"><strong>Abaixo de 16 px:</strong> não utilizar. A versão principal não deve ser reduzida para substituir a versão óptica.</p></div></article>
+      </div>
+      <article class="proof" style="margin-top:18px"><h3>13 · Usos incorretos</h3><p>As proibições preservam a distinção da contraforma aberta e evitam leituras de seta, montanha, telhado ou A convencional.</p><div class="incorrect-grid">
+        <div class="incorrect"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#07111F"/><path d="M10.5 35L24 9.5L37.5 35M14 28H34" stroke="#F7F8F6" stroke-width="4.6" fill="none"/><path d="M6 6L42 42M42 6L6 42" stroke="#F59E0B" stroke-width="2"/></svg><strong>Adicionar barra transversal</strong><span>Transforma a contraforma em leitura de A.</span></div>
+        <div class="incorrect"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#07111F"/><path d="M24 9L24 35" stroke="#F7F8F6" stroke-width="4.6"/><path d="M6 6L42 42M42 6L6 42" stroke="#F59E0B" stroke-width="2"/></svg><strong>Fechar a contraforma</strong><span>Elimina o vazio que distingue H5.2-A.</span></div>
+        <div class="incorrect"><svg viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" rx="8" fill="#07111F"/><circle cx="24" cy="24" r="14" fill="#F7F8F6"/><path d="M6 6L42 42M42 6L6 42" stroke="#F59E0B" stroke-width="2"/></svg><strong>Adicionar módulo externo</strong><span>Cria uma segunda marca fora do disco.</span></div>
+        <div class="incorrect"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#07111F"/><path d="M10.5 35L24 9.5L37.5 35" stroke="#F7F8F6" stroke-width="4.6" fill="none" transform="rotate(15 24 24)"/><path d="M6 6L42 42M42 6L6 42" stroke="#F59E0B" stroke-width="2"/></svg><strong>Rotacionar ou distorcer</strong><span>Quebra o eixo estrutural e o centro óptico.</span></div>
+      </div></article>
+    </section>
+
+    <section id="files" class="section">
+      <div class="eyebrow">14 · arquivos SVG finais</div>
+      <h2>Pacote isolado para aprovação</h2>
+        <p class="section-intro">Estes são os arquivos canônicos do símbolo H5.2-A, integrados ao diretório oficial de assets do repositório.</p>
+      <div class="files">
+        <a class="file" href="h5-2-a-primary-positive.svg">h5-2-a-primary-positive.svg</a>
+        <a class="file" href="h5-2-a-primary-negative.svg">h5-2-a-primary-negative.svg</a>
+        <a class="file" href="h5-2-a-optical-16-positive.svg">h5-2-a-optical-16-positive.svg</a>
+        <a class="file" href="h5-2-a-optical-16-negative.svg">h5-2-a-optical-16-negative.svg</a>
+        <a class="file" href="h5-2-a-optical-24-positive.svg">h5-2-a-optical-24-positive.svg</a>
+        <a class="file" href="h5-2-a-optical-24-negative.svg">h5-2-a-optical-24-negative.svg</a>
+        <a class="file" href="h5-2-a-monochrome.svg">h5-2-a-monochrome.svg</a>
+        <a class="file" href="h5-2-a-favicon-16.svg">h5-2-a-favicon-16.svg</a>
+      </div>
+      <div class="recommendation"><strong>Recomendação objetiva</strong><span><b>Não substituir os assets oficiais ainda.</b> Usar este pacote somente para aprovação técnica. Depois de aprovado, fazer uma etapa separada de substituição controlada, com validação de integrações e rollback.</span></div>
+    </section>
+
+    <footer class="footer"><strong>Estado:</strong> H5.2-A refinada para aprovação · sem publicação do Design System · sem substituição de assets oficiais.</footer>
+  </main>
+</body>
+</html>

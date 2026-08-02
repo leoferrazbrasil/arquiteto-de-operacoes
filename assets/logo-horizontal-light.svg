@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 130" fill="none">
-  <g transform="translate(20 25)"><rect x="5" y="5" width="24" height="24" rx="5" stroke="#FFFFFF" stroke-width="3"/><rect x="49" y="5" width="24" height="24" rx="5" stroke="#FFFFFF" stroke-width="3"/><rect x="27" y="49" width="24" height="24" rx="5" stroke="#FFFFFF" stroke-width="3"/><path d="M29 17h20M17 29v12c0 5 4 9 9 9h1M61 29v12c0 5-4 9-9 9h-1" stroke="#1EC9B7" stroke-width="3" stroke-linecap="round"/></g>
-  <text x="125" y="61" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">Arquiteto de Operações</text>
-  <text x="127" y="91" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#B7C3D0">nova categoria profissional · por Leonardo Brasil</text>
+  <g transform="translate(20 25)">
+    <circle cx="39" cy="39" r="32.5" fill="#F7F8F6"/>
+    <path d="M17.0625 56.875L39 15.4375L60.9375 56.875" stroke="#07111F" stroke-width="7.475" stroke-linecap="butt" stroke-linejoin="miter"/>
+  </g>
+  <text x="125" y="61" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">Arquiteto de OperaÃ§Ãµes</text>
+  <text x="127" y="91" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#B7C3D0">nova categoria profissional Â· por Leonardo Brasil</text>
 </svg>
