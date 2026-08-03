@@ -1,11 +1,16 @@
 ---
 status: approved
-version: v01
+version: v02
+previous_version: v01
 previous_status: review
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
 approved_by: Leonardo Brasil
 approval_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
+revision_approved_by: Leonardo Brasil
+revision_approved_at: 2026-08-03
+revision_reason: localização da pontuação para português brasileiro
+revision_scope: remoção de travessão usado como conector retórico
 content_id: pinned-post-02
 campaign_id: pinned-posts-inaugural
 sequence_position: 2
@@ -24,6 +29,7 @@ editorial_approved_at: 2026-08-02
 factual_approved_at: 2026-08-02
 visual_approver: ""
 visual_approved_at: null
+visual_status: pending
 ---
 
 # Folha de revisão — pinned-post-02
@@ -31,6 +37,10 @@ visual_approved_at: null
 ## 1. Objetivo
 
 Responder à pergunta aberta pela Publicação 1, fixar a definição oficial de Arquiteto de Operações, delimitar sua responsabilidade e reduzir confusões com campos adjacentes, sem inventar método, competências, entregáveis ou oferta.
+
+### Revisão editorial v02
+
+A correção editorial de localização foi aprovada por Leonardo Brasil em `2026-08-03`. O travessão usado como conector retórico foi removido do texto secundário da Tela 6. Não houve alteração factual, e a auditoria editorial ou factual não foi reaberta. As legendas permanecem literalmente inalteradas, com contagens de 320, 787 e 149 caracteres. Os assets visuais anteriores da tela afetada precisam ser corrigidos e reexportados; `visual_status` permanece `pending`.
 
 ## 2. Público, função e consciência
 
@@ -164,6 +174,8 @@ Responder à pergunta aberta pela Publicação 1, fixar a definição oficial de
 | Profissão antes da disciplina | Coerente |
 | Preparação da Publicação 3 sem antecipação integral | Coerente |
 | CTA e destino previstos | Coerentes e pendentes |
+| Versão documental | `v02`; versão anterior `v01` |
+| Correção factual | nenhuma |
 
 ## 11. Gates operacionais
 
@@ -195,4 +207,4 @@ Os gates acima não bloqueiam revisão editorial, revisão factual ou `approved`
 
 ## 13. Recomendação de estado
 
-**Estado anterior:** `review`. **Estado atual:** `approved`. A auditoria conjunta foi concluída sem bloqueadores e as aprovações editorial e factual foram registradas por Leonardo Brasil. **Próximo estado possível:** `designed`, condicionado aos gates visuais aplicáveis. Nenhuma aprovação visual foi concedida.
+**Estado anterior:** `review`. **Estado atual:** `approved`. A correção editorial de localização foi aprovada sem alteração factual e sem reabertura da auditoria. **Próximo estado possível:** `designed`, após correção e reexportação do asset afetado e aprovação visual. Nenhuma aprovação visual foi concedida; `visual_status` permanece `pending`.

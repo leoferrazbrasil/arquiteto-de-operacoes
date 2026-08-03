@@ -1,5 +1,19 @@
 # Changelog
 
+## Correção editorial de localização — Publicações 1 e 2
+
+### Aprovado
+
+- travessões usados como conectores retóricos removidos dos três textos autorizados;
+- texto principal da Tela 9 da Publicação 1 corrigido;
+- texto secundário da Tela 6 da Publicação 2 corrigido;
+- legenda canônica da Publicação 1 corrigida;
+- contagem da legenda canônica atualizada de 390 para 389 caracteres;
+- Publicações 1 e 2 promovidas para `v02`, preservando `v01` como versão anterior;
+- nenhuma alteração factual realizada;
+- nenhuma aprovação visual concedida;
+- artes das telas afetadas pendentes de correção e reexportação.
+
 ## Publicações 2 e 3 v01 — aprovação editorial e factual conjunta
 
 ### Aprovado

@@ -1,10 +1,15 @@
 ---
 status: approved
-version: v01
+version: v02
+previous_version: v01
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional concluída sem bloqueadores
 approved_by: Leonardo Brasil
 approval_basis: auditoria editorial e factual final concluída sem bloqueadores
+revision_approved_by: Leonardo Brasil
+revision_approved_at: 2026-08-03
+revision_reason: localização da pontuação para português brasileiro
+revision_scope: remoção de travessão usado como conector retórico
 content_id: pinned-post-01
 campaign_id: pinned-posts-inaugural
 sequence_position: 1
@@ -50,8 +55,8 @@ Legenda principal e canônica para publicação simultânea no fluxo atual.
 caption_id: caption_crosspost_400
 canonical: true
 character_limit_total: 400
-character_count_total: 390
-character_count_body: 390
+character_count_total: 389
+character_count_body: 389
 character_count_hashtags: 0
 hashtags_included: false
 crosspost_targets:
@@ -69,7 +74,7 @@ destination_included: false
 ### Texto literal publicável
 
 ```text
-Uma nova profissão está emergindo — esta é uma tese institucional, não um fato comprovado.
+Uma nova profissão está emergindo. Esta é uma tese institucional, não um fato comprovado.
 
 De forma independente, uma nova capacidade profissional está emergindo: integrar pessoas, processos, dados, tecnologia e IA numa operação.
 

@@ -1,10 +1,15 @@
 ---
 status: approved
-version: v01
+version: v02
+previous_version: v01
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional concluída sem bloqueadores
 approved_by: Leonardo Brasil
 approval_basis: auditoria editorial e factual final concluída sem bloqueadores
+revision_approved_by: Leonardo Brasil
+revision_approved_at: 2026-08-03
+revision_reason: localização da pontuação para português brasileiro
+revision_scope: remoção de travessão usado como conector retórico
 content_id: pinned-post-01
 campaign_id: pinned-posts-inaugural
 sequence_position: 1
@@ -109,7 +114,7 @@ Abrir o movimento **mudança → profissão → caminhos** apresentando, como te
 ### Tela 9 — Pergunta e continuidade
 
 - **Função narrativa:** encerrar abrindo a pergunta que a publicação 2 responderá.
-- **Texto principal:** Que profissão nomeia essa capacidade — e qual responsabilidade ela assume?
+- **Texto principal:** Que profissão nomeia essa capacidade e qual responsabilidade ela assume?
 - **Texto secundário:** Conheça a profissão.
 - **Orientação de ênfase:** priorizar a pergunta; apresentar o CTA como continuidade sóbria, sem aparência de oferta já disponível.
 - **Observação factual ou editorial:** o texto secundário é o CTA previsto. Seu uso clicável e o destino permanecem pendentes de validação operacional antes de `scheduled`.

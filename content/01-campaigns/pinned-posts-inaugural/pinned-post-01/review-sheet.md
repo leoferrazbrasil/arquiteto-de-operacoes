@@ -1,10 +1,15 @@
 ---
 status: approved
-version: v01
+version: v02
+previous_version: v01
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional concluída sem bloqueadores
 approved_by: Leonardo Brasil
 approval_basis: auditoria editorial e factual final concluída sem bloqueadores
+revision_approved_by: Leonardo Brasil
+revision_approved_at: 2026-08-03
+revision_reason: localização da pontuação para português brasileiro
+revision_scope: remoção de travessão usado como conector retórico
 content_id: pinned-post-01
 campaign_id: pinned-posts-inaugural
 sequence_position: 1
@@ -24,6 +29,7 @@ editorial_approved_at: 2026-08-02
 factual_approved_at: 2026-08-02
 visual_approver: ""
 visual_approved_at: null
+visual_status: pending
 ---
 
 # Folha de revisão — pinned-post-01
@@ -35,6 +41,10 @@ Manifesto institucional de nove telas que abre a campanha inaugural pelo movimen
 ## 2. Objetivo
 
 Fazer o público reconhecer a tese de que uma capacidade profissional integrada está emergindo e desejar compreender qual profissão a nomeia, sem simular consenso de mercado e sem antecipar a definição completa, a disciplina, o resultado ou as duas jornadas.
+
+### Revisão editorial v02
+
+A correção editorial de localização foi aprovada por Leonardo Brasil em `2026-08-03`. O travessão usado como conector retórico foi removido da Tela 9 e substituído por uma conjunção natural; na legenda canônica, foi substituído por ponto. Não houve alteração factual, e a auditoria editorial ou factual não foi reaberta. Os assets visuais anteriores das telas afetadas precisam ser corrigidos e reexportados; `visual_status` permanece `pending`.
 
 ## 3. Enquadramento editorial
 
@@ -141,7 +151,7 @@ Nenhuma fonte foi alterada.
 | --- | --- |
 | `content_id` | `pinned-post-01` nos três artefatos |
 | `campaign_id` | `pinned-posts-inaugural` nos três artefatos |
-| Versão | `v01` nos três artefatos |
+| Versão | `v02` nos três artefatos; versão anterior `v01` |
 | Estado submetido à decisão | `review` nos três artefatos |
 | Estado atual | `approved` nos três artefatos |
 | Claims | Mesmos dois claims, com IDs, tipos, textos, independência e limites factuais preservados |
@@ -226,13 +236,13 @@ Nenhuma fonte foi alterada.
 
 | Variante | Função | Contagem | Limite | Resultado |
 | --- | --- | ---: | --- | --- |
-| `caption_crosspost_400` | principal e canônica | 390 | <= 400 | conforme |
+| `caption_crosspost_400` | principal e canônica | 389 | <= 400 | conforme |
 | `caption_instagram_extended` | opcional | 788 | sem limite definido neste documento | conforme |
 | `caption_micro` | apoio | 169 | 120–180 | conforme |
 
 ### Resultado
 
-As três contagens e os requisitos editoriais, factuais e operacionais foram submetidos à decisão no estado `review`. A revisão foi concluída sem bloqueadores, e a peça foi aprovada editorial e factualmente por Leonardo Brasil. A aprovação visual e a validação operacional pendente de CTA e destino não foram concedidas por esta decisão.
+As contagens atuais são 389, 788 e 169 caracteres. A correção editorial de localização foi aprovada sem alteração factual e sem reabertura da auditoria editorial ou factual. A aprovação visual e a validação operacional pendente de CTA e destino não foram concedidas por esta decisão. Os assets visuais anteriores das telas afetadas precisam ser corrigidos e reexportados.
 
 ## 13. Aprovações
 
@@ -256,18 +266,18 @@ A aprovação editorial e a aprovação factual estão registradas nesta versão
 
 - **Estado submetido à decisão:** `review`.
 - **Status atual:** `approved`.
-- **Próximo estado possível:** `designed`, após cumprimento dos gates visuais aplicáveis.
+- **Próximo estado possível:** `designed`, após correção e reexportação dos assets afetados e aprovação visual.
 - **Limite:** a aprovação editorial e factual não concede aprovação visual nem conclui os gates de design, agendamento ou publicação.
 
 ## 15. Validação final
 
-1. **Recontagem literal:** `caption_crosspost_400` = 390; `caption_instagram_extended` = 788; `caption_micro` = 169.
-2. **Teto da legenda canônica:** confirmado — 390 <= 400.
+1. **Recontagem literal:** `caption_crosspost_400` = 389; `caption_instagram_extended` = 788; `caption_micro` = 169.
+2. **Teto da legenda canônica:** confirmado — 389 <= 400.
 3. **Faixa da legenda micro:** confirmado — 169 está entre 120 e 180.
 4. **Hashtags:** ausentes nas três variantes.
 5. **URL nos textos publicáveis:** ausente nas três variantes.
 6. **Claims estruturados na legenda:** confirmados — `pinned-01-claim-title` e `clm-p01-001`.
-7. **Carrossel:** preservado sem alteração.
-8. **Estado e versão:** `approved` e `v01` registrados; estado anterior `review`.
+7. **Carrossel:** somente o texto principal da Tela 9 recebeu a correção de localização aprovada.
+8. **Estado e versão:** `approved` e `v02` registrados; versão anterior `v01`.
 9. **CTA e destino:** previstos e pendentes de validação operacional.
-10. **Consistência:** carrossel, legenda e folha de revisão estão consistentes entre si e com a decisão formal registrada.
+10. **Consistência:** carrossel, legenda e folha de revisão estão consistentes entre si e com a decisão formal registrada; não houve alteração factual.

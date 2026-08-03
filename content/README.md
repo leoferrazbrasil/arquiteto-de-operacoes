@@ -30,17 +30,18 @@ Os cinco arquivos abaixo formam a fonte canônica da Fundação Editorial:
 - **Autoridade editorial:** Leonardo Brasil
 - **Autoridade factual:** Leonardo Brasil
 
-Os três carrosséis estão em `approved` e `v01`, com aprovação editorial e
-factual de Leonardo Brasil em `2026-08-02`. A campanha inaugural textual está
-completa e liberada para design; o próximo estado possível das três publicações
-é `designed`. Nenhuma aprovação visual foi concedida. URL, CTAs e especificações
-visuais permanecem como gates operacionais posteriores.
+Os três carrosséis estão em `approved`, com as Publicações 1 e 2 em `v02` e a
+Publicação 3 em `v01`. A correção editorial de localização das Publicações 1 e
+2 foi aprovada por Leonardo Brasil em `2026-08-03`. A campanha inaugural
+textual está completa e liberada para design; o próximo estado possível das
+três publicações é `designed`. Nenhuma aprovação visual foi concedida. URL,
+CTAs e especificações visuais permanecem como gates operacionais posteriores.
 
-## Pinned Post 01 v01 — approved
+## Pinned Post 01 v02 — approved
 
 - **Content ID:** `pinned-post-01`
 - **Status:** `approved`
-- **Versão:** `v01`
+- **Versão:** `v02` (anterior: `v01`)
 - **Aprovação editorial:** Leonardo Brasil em `2026-08-02`
 - **Aprovação factual:** Leonardo Brasil em `2026-08-02`
 - **Próximo estado possível:** `designed`
@@ -51,15 +52,16 @@ visuais permanecem como gates operacionais posteriores.
 O conteúdo está liberado para design, sem aprovação visual concedida. CTA,
 URL de destino, condição de crosspost, dimensões, safe zones, assets e exports
 continuam sujeitos aos respectivos gates. A legenda principal permanece a
-versão canônica de crosspost com 390 caracteres para Instagram, Facebook e
+versão canônica de crosspost com 389 caracteres para Instagram, Facebook e
 Threads; seu limite de 400 caracteres deve ser revalidado antes de
-`scheduled`.
+`scheduled`. A correção de localização foi aprovada em `2026-08-03`; as artes
+da Tela 9 ainda precisam ser corrigidas e reexportadas.
 
-## Pinned Post 02 v01 — approved
+## Pinned Post 02 v02 — approved
 
 - **Content ID:** `pinned-post-02`
 - **Status:** `approved`
-- **Versão:** `v01`
+- **Versão:** `v02` (anterior: `v01`)
 - **Estrutura:** nove telas
 - **Conteúdo central:** profissão e definição oficial preservada
 - **Legenda canônica:** 320 caracteres
@@ -70,6 +72,10 @@ Threads; seu limite de 400 caracteres deve ser revalidado antes de
 - **Carrossel:** `01-campaigns/pinned-posts-inaugural/pinned-post-02/carousel.md`
 - **Legenda:** `01-campaigns/pinned-posts-inaugural/pinned-post-02/caption.md`
 - **Ficha de revisão:** `01-campaigns/pinned-posts-inaugural/pinned-post-02/review-sheet.md`
+
+A correção de localização foi aprovada em `2026-08-03`; a arte da Tela 6 ainda
+precisa ser corrigida e reexportada. As três legendas permanecem literalmente
+inalteradas.
 
 ## Pinned Post 03 v01 — approved
 
@@ -87,8 +93,9 @@ Threads; seu limite de 400 caracteres deve ser revalidado antes de
 - **Legenda:** `01-campaigns/pinned-posts-inaugural/pinned-post-03/caption.md`
 - **Ficha de revisão:** `01-campaigns/pinned-posts-inaugural/pinned-post-03/review-sheet.md`
 
-A sequência completa **mudança → profissão → caminhos** está aprovada em
-`v01`. Dimensões, safe zones, assets, exports, CTA, URL, condição de crosspost,
+A sequência completa **mudança → profissão → caminhos** está aprovada, com as
+Publicações 1 e 2 em `v02` e a Publicação 3 em `v01`. Dimensões, safe zones,
+assets, exports, CTA, URL, condição de crosspost,
 aprovação visual, agendamento e publicação continuam sujeitos aos respectivos
 gates. A regra de 400 caracteres deve ser confirmada novamente antes de
 `scheduled`.
@@ -149,6 +156,17 @@ Os estados oficiais são:
 O estado atual deve ser registrado nos metadados ou no cabeçalho do arquivo.
 Uma revisão de conteúdo publicado deve preservar o histórico e iniciar uma
 nova versão no estado adequado.
+
+## Convenção operacional de localização
+
+Nos textos públicos da marca, evitar travessão e meia-risca como conectores
+retóricos. Preferir ponto, vírgula, dois-pontos ou conjunções naturais do
+português brasileiro. Hífens ortográficos legítimos devem ser preservados.
+
+A regra se aplica aos textos efetivamente exibidos ou publicados e não altera
+automaticamente hífens ortográficos, intervalos numéricos, nomes técnicos,
+conteúdo histórico, metadados internos ou títulos técnicos como
+“Tela 1 — Capa”.
 
 ## Convenção de nomes
 

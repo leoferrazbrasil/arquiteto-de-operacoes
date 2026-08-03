@@ -1,11 +1,16 @@
 ---
 status: approved
-version: v01
+version: v02
+previous_version: v01
 previous_status: review
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
 approved_by: Leonardo Brasil
 approval_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
+revision_approved_by: Leonardo Brasil
+revision_approved_at: 2026-08-03
+revision_reason: localização da pontuação para português brasileiro
+revision_scope: remoção de travessão usado como conector retórico
 content_id: pinned-post-02
 campaign_id: pinned-posts-inaugural
 sequence_position: 2
@@ -90,7 +95,7 @@ Responder à pergunta aberta pela Publicação 1 — **qual profissão nomeia es
 - **Número:** 6.
 - **Função narrativa:** apresentar o sentido da atuação sem converter a definição em garantia.
 - **Texto principal:** Ampliar eficiência, controle e capacidade de execução.
-- **Texto secundário:** Ampliar previsibilidade — sem prometer controle absoluto.
+- **Texto secundário:** Ampliar previsibilidade sem prometer controle absoluto.
 - **Orientação de ênfase:** destacar o verbo “ampliar”; o limite deve permanecer visível e legível.
 - **Observação editorial ou factual:** finalidades literais de `clm-p02-001`. Não são promessa de ganho, resultado garantido ou comparação de desempenho.
 - **Transição:** da finalidade para a distinção entre arquitetura e contribuições isoladas.
