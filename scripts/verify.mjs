@@ -78,10 +78,99 @@ function checkHtml(file, html, requiresFavicon) {
   checkAnchors(file, html);
 }
 
+function checkLandingPage(file, html, script) {
+  const text = html
+    .replace(/<script\b[\s\S]*?<\/script>/giu, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/giu, ' ')
+    .replace(/<[^>]+>/gu, ' ')
+    .replaceAll('&amp;', '&')
+    .replace(/\s+/gu, ' ')
+    .trim();
+
+  const requiredText = [
+    'O Arquiteto de Operações é o profissional responsável por projetar, estruturar, integrar, automatizar e evoluir os processos e sistemas operacionais de uma organização, conectando pessoas, dados, tecnologia e inteligência artificial para ampliar eficiência, controle, capacidade de execução e previsibilidade.',
+    'A inteligência artificial não substitui a necessidade de arquitetura. Ela multiplica a capacidade de quem sabe arquitetar.',
+    'Quero me tornar Arquiteto de Operações.',
+    'Minha empresa precisa de Arquitetura Operacional.',
+    'Conheça a jornada profissional.',
+    'Conheça a jornada empresarial.',
+    'Resultado desejado',
+    'Evidências em construção'
+  ];
+  for (const value of requiredText) {
+    if (!text.includes(value)) fail(`${display(file)}: missing required public text: ${value}`);
+  }
+
+  const prohibitedText = [
+    'solicitar análise',
+    'registrar interesse',
+    'interesse registrado',
+    'receita mais previsível',
+    'Porto Alegre Oficial',
+    'Transformação entregue'
+  ];
+  for (const value of prohibitedText) {
+    if (text.toLocaleLowerCase('pt-BR').includes(value.toLocaleLowerCase('pt-BR'))) {
+      fail(`${display(file)}: prohibited public text: ${value}`);
+    }
+  }
+
+  if (/<(?:dialog|form|input|select|textarea)\b/iu.test(html)) fail(`${display(file)}: collection interface remains in public DOM`);
+  if (/\bhref=["'][^"']+\.html(?:[?#][^"']*)?["']/iu.test(html)) fail(`${display(file)}: public .html link remains`);
+  if (/<script\b[^>]*\bsrc=["']config\.js["']/iu.test(html)) fail(`${display(file)}: config.js remains publicly loaded`);
+  if (/<meta\b[^>]*(?:property|name)=["'](?:og:image|twitter:image)["']/iu.test(html)) fail(`${display(file)}: unapproved social image metadata`);
+
+  const expectedTitle = 'Arquiteto de Operações | Profissão, disciplina e jornadas';
+  const expectedDescription = 'Conheça a definição do Arquiteto de Operações, a disciplina Arquitetura Operacional, o resultado desejado Operação Previsível e as duas jornadas da categoria.';
+  const expectedUrl = 'https://leonardobrasil.com.br/arquiteto-de-operacoes/';
+  const metadataChecks = [
+    [/<title>([^<]+)<\/title>/iu, expectedTitle, 'title'],
+    [/<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/iu, expectedDescription, 'description'],
+    [/<meta\b[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/iu, expectedTitle, 'og:title'],
+    [/<meta\b[^>]*property=["']og:description["'][^>]*content=["']([^"']+)["']/iu, expectedDescription, 'og:description'],
+    [/<meta\b[^>]*name=["']twitter:title["'][^>]*content=["']([^"']+)["']/iu, expectedTitle, 'twitter:title'],
+    [/<meta\b[^>]*name=["']twitter:description["'][^>]*content=["']([^"']+)["']/iu, expectedDescription, 'twitter:description'],
+    [/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/iu, expectedUrl, 'canonical'],
+    [/<meta\b[^>]*property=["']og:url["'][^>]*content=["']([^"']+)["']/iu, expectedUrl, 'og:url']
+  ];
+  for (const [pattern, expected, name] of metadataChecks) {
+    const actual = html.match(pattern)?.[1];
+    if (actual !== expected) fail(`${display(file)}: ${name} does not match approved value`);
+  }
+
+  const levels = [...html.matchAll(/<article\b[^>]*class=["'][^"']*level-card[^"']*["'][^>]*>[\s\S]*?<h3>([^<]+)<\/h3>[\s\S]*?<\/article>/giu)]
+    .map(([, title]) => title.trim());
+  const expectedLevels = ['Analista', 'Especialista', 'Arquiteto', 'Arquiteto Líder'];
+  if (levels.length !== expectedLevels.length || levels.some((level, index) => level !== expectedLevels[index])) {
+    fail(`${display(file)}: professional levels do not match approved inventory`);
+  }
+
+  const sectionOrder = ['id="profissional"', 'id="definicao-oficial"', 'id="disciplina"'].map(marker => html.indexOf(marker));
+  if (sectionOrder.some(index => index < 0) || !(sectionOrder[0] < sectionOrder[1] && sectionOrder[1] < sectionOrder[2])) {
+    fail(`${display(file)}: profession, official definition and discipline order is incorrect`);
+  }
+
+  const forbiddenScriptTokens = [
+    'localStorage', 'sessionStorage', 'fetch(', 'FormData', 'dataLayer', 'persistSubmission',
+    'form_submitted', 'form_opened', 'ADO_CONFIG', 'AO_CONFIG', 'openInterestModal'
+  ];
+  for (const token of forbiddenScriptTokens) {
+    if (script.includes(token)) fail(`script.js: forbidden collection behavior remains: ${token}`);
+  }
+}
+
 function checkCss(file, css) {
   const stripped = css.replace(/\/\*[\s\S]*?\*\//gu, '').replace(/(['"])(?:\\.|(?!\1).)*\1/gu, '');
   if ((stripped.match(/\{/gu) || []).length !== (stripped.match(/\}/gu) || []).length) fail(`${display(file)}: unbalanced CSS braces`);
   if ((stripped.match(/\(/gu) || []).length !== (stripped.match(/\)/gu) || []).length) fail(`${display(file)}: unbalanced CSS parentheses`);
+  if (file.endsWith('styles.css')) {
+    const systemsBottom = Number(css.match(/\.node-systems\s*\{[^}]*bottom\s*:\s*([\d.]+)%/u)?.[1] || 0);
+    if (systemsBottom < 15) fail(`${display(file)}: Tecnologia node must remain clear of the Resultado desejado card`);
+    const heroGridRatio = Number(css.match(/\.hero-grid\s*\{[^}]*grid-template-columns\s*:\s*minmax\(0,([\d.]+)fr\)/u)?.[1] || 0);
+    if (heroGridRatio < 1.12) fail(`${display(file)}: desktop hero copy column must support the approved two-line heading`);
+    const desktopProblemProse = /@media\s*\(\s*min-width\s*:\s*981px\s*\)[\s\S]*#problema\s*>\s*\.two-column\s+\.prose\s*\{[^}]*display\s*:\s*flex[^}]*height\s*:\s*100%[^}]*flex-direction\s*:\s*column[^}]*justify-content\s*:\s*space-between/iu;
+    if (!desktopProblemProse.test(css)) fail(`${display(file)}: desktop problem prose must fill the two-column editorial row`);
+  }
 }
 
 function checkDeployWorkflow(file, workflow) {
@@ -143,6 +232,12 @@ for (const file of [join(root, 'config.js'), join(root, 'script.js')]) {
   const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8' });
   if (result.status !== 0) fail(`${display(file)}: JavaScript syntax error${result.stderr ? `: ${result.stderr.trim()}` : ''}`);
 }
+
+checkLandingPage(
+  join(root, 'index.html'),
+  readUtf8(join(root, 'index.html')),
+  readUtf8(join(root, 'script.js'))
+);
 
 for (const name of ['tokens.json', 'data/form-fields.json']) {
   const file = join(root, name);
