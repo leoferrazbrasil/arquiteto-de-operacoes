@@ -1,8 +1,10 @@
 ---
-status: review
+status: approved
 version: v01
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional concluída sem bloqueadores
+approved_by: Leonardo Brasil
+approval_basis: auditoria editorial e factual final concluída sem bloqueadores
 content_id: pinned-post-01
 campaign_id: pinned-posts-inaugural
 sequence_position: 1
@@ -26,10 +28,10 @@ destination: "https://leonardobrasil.com.br/arquiteto-de-operacoes"
 destination_status: previsto_pendente_validacao_operacional
 operational_rule_status: verified_for_current_workflow
 operational_rule_verified_at: 2026-08-02
-editorial_approver: ""
-factual_approver: ""
-editorial_approved_at: null
-factual_approved_at: null
+editorial_approver: Leonardo Brasil
+factual_approver: Leonardo Brasil
+editorial_approved_at: 2026-08-02
+factual_approved_at: 2026-08-02
 ---
 
 # Legendas — Uma nova profissão está emergindo
@@ -97,7 +99,7 @@ usage: somente quando a publicação simultânea for deliberadamente desativada
 character_count_total: 788
 hashtags_included: false
 destination_included: false
-status: draft
+status: approved
 version: v01
 ```
 
@@ -136,7 +138,7 @@ character_count_total: 169
 hashtags_included: false
 destination_included: false
 usage: chamada curta, story ou distribuição auxiliar
-status: draft
+status: approved
 version: v01
 ```
 

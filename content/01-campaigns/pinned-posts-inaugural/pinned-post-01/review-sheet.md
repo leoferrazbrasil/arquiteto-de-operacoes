@@ -1,8 +1,10 @@
 ---
-status: review
+status: approved
 version: v01
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional concluída sem bloqueadores
+approved_by: Leonardo Brasil
+approval_basis: auditoria editorial e factual final concluída sem bloqueadores
 content_id: pinned-post-01
 campaign_id: pinned-posts-inaugural
 sequence_position: 1
@@ -10,12 +12,16 @@ title: "Uma nova profissão está emergindo"
 channel: Instagram
 format: carousel
 artifact_type: review_sheet
-current_status: review
-recommended_next_status: review
-editorial_approver: ""
-factual_approver: ""
-editorial_approved_at: null
-factual_approved_at: null
+previous_status: review
+current_status: approved
+recommended_next_status: designed
+review_result: approved
+editorial_approval: approved
+factual_approval: approved
+editorial_approver: Leonardo Brasil
+factual_approver: Leonardo Brasil
+editorial_approved_at: 2026-08-02
+factual_approved_at: 2026-08-02
 visual_approver: ""
 visual_approved_at: null
 ---
@@ -136,14 +142,15 @@ Nenhuma fonte foi alterada.
 | `content_id` | `pinned-post-01` nos três artefatos |
 | `campaign_id` | `pinned-posts-inaugural` nos três artefatos |
 | Versão | `v01` nos três artefatos |
-| Estado | `draft` nos três artefatos |
+| Estado submetido à decisão | `review` nos três artefatos |
+| Estado atual | `approved` nos três artefatos |
 | Claims | Mesmos dois claims, com IDs, tipos, textos, independência e limites factuais preservados |
 | Ordem narrativa | Mudança → profissão → caminhos preservada |
 | CTA previsto | “Conheça a profissão.”; pendente de validação operacional |
 | Destino previsto | `https://leonardobrasil.com.br/arquiteto-de-operacoes`; pendente de validação operacional e ausente dos textos publicáveis |
 | Publicação 2 | Preparada sem antecipação da definição completa ou das duas jornadas |
 | Condição operacional | Crosspost atual para Instagram, Facebook e Threads, com teto verificado de 400 caracteres |
-| Contradições | Nenhuma contradição editorial, factual ou operacional identificada após a correção |
+| Contradições | Nenhuma contradição editorial, factual ou operacional identificada após a correção administrativa e a decisão formal |
 
 ## 9. Checklist editorial
 
@@ -184,8 +191,8 @@ Nenhuma fonte foi alterada.
 
 | Gate | Condição | Estado |
 | --- | --- | --- |
-| `G-DES-01` | Confirmar dimensões, safe zones e limites vigentes do Instagram | Pendente; não bloqueia redação ou revisão |
-| `G-DES-02` | Confirmar formato, qualidade e especificações de exportação | Pendente; não bloqueia redação ou revisão |
+| `G-DES-01` | Confirmar dimensões, safe zones e limites vigentes do Instagram | Pendente; gate anterior à composição visual |
+| `G-DES-02` | Confirmar formato, qualidade e especificações de exportação | Pendente; gate anterior à exportação |
 | `G-DES-03` | Produzir asset final, verificar Design System v0.2.0 e legibilidade, registrar aprovação visual | Pendente; nenhum asset criado |
 | `G-SCH-01` | Validar URL e adequação da página à promessa | Pendente |
 | `G-SCH-02` | Validar o CTA “Conheça a profissão.” diante da ação disponível | Pendente |
@@ -225,32 +232,32 @@ Nenhuma fonte foi alterada.
 
 ### Resultado
 
-As três contagens e os requisitos editoriais, factuais e operacionais estão conformes para submissão a `review`. A peça permanece em `draft`; esta validação não substitui aprovação editorial, aprovação factual, aprovação visual nem a validação operacional pendente de CTA e destino.
+As três contagens e os requisitos editoriais, factuais e operacionais foram submetidos à decisão no estado `review`. A revisão foi concluída sem bloqueadores, e a peça foi aprovada editorial e factualmente por Leonardo Brasil. A aprovação visual e a validação operacional pendente de CTA e destino não foram concedidas por esta decisão.
 
 ## 13. Aprovações
 
 ### Aprovação editorial
 
-- **Responsável:** ____________________________________
-- **Decisão:** ________________________________________
-- **Data:** ___________________________________________
-- **Observações:** ____________________________________
+- **Responsável:** Leonardo Brasil
+- **Decisão:** `approved`
+- **Data:** `2026-08-02`
+- **Observações:** auditoria editorial final concluída sem bloqueadores.
 
 ### Aprovação factual
 
-- **Responsável:** ____________________________________
-- **Decisão:** ________________________________________
-- **Data:** ___________________________________________
-- **Observações:** ____________________________________
+- **Responsável:** Leonardo Brasil
+- **Decisão:** `approved`
+- **Data:** `2026-08-02`
+- **Observações:** auditoria factual final concluída sem bloqueadores.
 
-Nenhuma aprovação editorial, factual ou visual está preenchida ou registrada nesta versão.
+A aprovação editorial e a aprovação factual estão registradas nesta versão. Nenhuma aprovação visual foi concedida ou registrada.
 
 ## 14. Recomendação de status
 
-- **Status atual obrigatório:** `draft`.
-- **Recomendação:** avançar para `review` somente porque todas as contagens e todos os requisitos desta correção estão conformes.
-- **Regra de bloqueio:** permanecer em `draft` caso qualquer contagem ou requisito deixe de estar conforme após uma alteração.
-- **Limite:** a recomendação não concede aprovação editorial, factual ou visual.
+- **Estado submetido à decisão:** `review`.
+- **Status atual:** `approved`.
+- **Próximo estado possível:** `designed`, após cumprimento dos gates visuais aplicáveis.
+- **Limite:** a aprovação editorial e factual não concede aprovação visual nem conclui os gates de design, agendamento ou publicação.
 
 ## 15. Validação final
 
@@ -261,6 +268,6 @@ Nenhuma aprovação editorial, factual ou visual está preenchida ou registrada 
 5. **URL nos textos publicáveis:** ausente nas três variantes.
 6. **Claims estruturados na legenda:** confirmados — `pinned-01-claim-title` e `clm-p01-001`.
 7. **Carrossel:** preservado sem alteração.
-8. **Estado e versão:** `draft` e `v01` preservados.
+8. **Estado e versão:** `approved` e `v01` registrados; estado anterior `review`.
 9. **CTA e destino:** previstos e pendentes de validação operacional.
-10. **Consistência:** legenda e folha de revisão estão consistentes entre si e com o carrossel.
+10. **Consistência:** carrossel, legenda e folha de revisão estão consistentes entre si e com a decisão formal registrada.

@@ -1,5 +1,16 @@
 # Changelog
 
+## Publicação 1 v01 — aprovação editorial e factual
+
+### Aprovado
+
+- conteúdo aprovado por Leonardo Brasil após auditoria editorial e factual final concluída sem bloqueadores;
+- inconsistência administrativa da folha de revisão corrigida, com `review` registrado como estado anterior e `approved` como estado atual;
+- carrossel com nove telas preservado sem alteração;
+- legendas preservadas em 390, 788 e 169 caracteres;
+- próximo estado possível definido como `designed`;
+- aprovação visual, CTA, URL, crosspost, dimensões, safe zones, assets, exports, agendamento e publicação permanecem pendentes nos respectivos gates.
+
 ## Publicação 1 v01 — entrada em review
 
 ### Em revisão

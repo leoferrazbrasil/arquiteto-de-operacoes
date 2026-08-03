@@ -30,28 +30,31 @@ Os cinco arquivos abaixo formam a fonte canônica da Fundação Editorial:
 - **Autoridade editorial:** Leonardo Brasil
 - **Autoridade factual:** Leonardo Brasil
 
-Os três carrosséis estão liberados para redação, mas suas peças individuais
-permanecem em `draft` e `v01`. Roteiros, legendas e assets ainda não estão
-aprovados. URL, CTAs e especificações visuais permanecem como gates
-operacionais posteriores: não bloqueiam a aprovação editorial. URL e CTAs
-devem ser validados antes de `scheduled`; especificações visuais devem ser
-confirmadas antes da composição e da aprovação visual no estado `designed`.
+Os três carrosséis foram liberados para redação pelo briefing. A Publicação 1
+está aprovada editorial e factualmente em `v01`; as futuras Publicações 2 e 3
+permanecem em `draft` e `v01`. URL, CTAs e especificações visuais permanecem
+como gates operacionais posteriores. URL e CTAs devem ser validados antes de
+`scheduled`; especificações visuais devem ser confirmadas antes da composição
+e da aprovação visual no estado `designed`.
 
-## Publicação 1 v01 — em review
+## Pinned Post 01 v01 — approved
 
 - **Content ID:** `pinned-post-01`
-- **Status:** `review`
+- **Status:** `approved`
 - **Versão:** `v01`
-- **Auditoria:** editorial, factual e operacional concluída sem bloqueadores em `2026-08-02`
+- **Aprovação editorial:** Leonardo Brasil em `2026-08-02`
+- **Aprovação factual:** Leonardo Brasil em `2026-08-02`
+- **Próximo estado possível:** `designed`
 - **Carrossel:** `01-campaigns/pinned-posts-inaugural/pinned-post-01/carousel.md`
 - **Legenda:** `01-campaigns/pinned-posts-inaugural/pinned-post-01/caption.md`
 - **Ficha de revisão:** `01-campaigns/pinned-posts-inaugural/pinned-post-01/review-sheet.md`
 
-O conteúdo entrou em revisão sem aprovação editorial, factual ou visual. A
-legenda principal é a versão canônica de crosspost com 390 caracteres para
-Instagram, Facebook e Threads; seu limite de 400 caracteres deve ser
-revalidado antes de `scheduled`. CTA, URL de destino, especificações de
-design e assets permanecem pendentes como gates operacionais posteriores.
+O conteúdo está liberado para design, sem aprovação visual concedida. CTA,
+URL de destino, condição de crosspost, dimensões, safe zones, assets e exports
+continuam sujeitos aos respectivos gates. A legenda principal permanece a
+versão canônica de crosspost com 390 caracteres para Instagram, Facebook e
+Threads; seu limite de 400 caracteres deve ser revalidado antes de
+`scheduled`.
 
 ## Estrutura
 
