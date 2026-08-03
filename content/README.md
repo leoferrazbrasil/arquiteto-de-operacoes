@@ -31,8 +31,8 @@ Os cinco arquivos abaixo formam a fonte canônica da Fundação Editorial:
 - **Autoridade factual:** Leonardo Brasil
 
 Os três carrosséis foram liberados para redação pelo briefing. A Publicação 1
-está aprovada editorial e factualmente em `v01`; as futuras Publicações 2 e 3
-permanecem em `draft` e `v01`. URL, CTAs e especificações visuais permanecem
+está aprovada editorial e factualmente em `v01`; as Publicações 2 e 3 estão
+em `review` e `v01`. URL, CTAs e especificações visuais permanecem
 como gates operacionais posteriores. URL e CTAs devem ser validados antes de
 `scheduled`; especificações visuais devem ser confirmadas antes da composição
 e da aprovação visual no estado `designed`.
@@ -55,6 +55,37 @@ continuam sujeitos aos respectivos gates. A legenda principal permanece a
 versão canônica de crosspost com 390 caracteres para Instagram, Facebook e
 Threads; seu limite de 400 caracteres deve ser revalidado antes de
 `scheduled`.
+
+## Pinned Post 02 v01 — em review
+
+- **Content ID:** `pinned-post-02`
+- **Status:** `review`
+- **Versão:** `v01`
+- **Estrutura:** nove telas
+- **Conteúdo central:** profissão e definição oficial preservada
+- **Legenda canônica:** 320 caracteres
+- **Aprovações:** nenhuma aprovação editorial, factual ou visual concedida
+- **Carrossel:** `01-campaigns/pinned-posts-inaugural/pinned-post-02/carousel.md`
+- **Legenda:** `01-campaigns/pinned-posts-inaugural/pinned-post-02/caption.md`
+- **Ficha de revisão:** `01-campaigns/pinned-posts-inaugural/pinned-post-02/review-sheet.md`
+
+## Pinned Post 03 v01 — em review
+
+- **Content ID:** `pinned-post-03`
+- **Status:** `review`
+- **Versão:** `v01`
+- **Estrutura:** nove telas
+- **Conteúdo central:** duas jornadas preservadas separadamente
+- **Legenda canônica:** 316 caracteres
+- **Aprovações:** nenhuma aprovação editorial, factual ou visual concedida
+- **Carrossel:** `01-campaigns/pinned-posts-inaugural/pinned-post-03/carousel.md`
+- **Legenda:** `01-campaigns/pinned-posts-inaugural/pinned-post-03/caption.md`
+- **Ficha de revisão:** `01-campaigns/pinned-posts-inaugural/pinned-post-03/review-sheet.md`
+
+A sequência completa **mudança → profissão → caminhos** está registrada com a
+Publicação 1 em `approved` e as Publicações 2 e 3 em `review`. CTA, URL,
+condição de crosspost, design, assets e aprovação visual permanecem pendentes.
+A regra de 400 caracteres deve ser confirmada novamente antes de `scheduled`.
 
 ## Estrutura
 

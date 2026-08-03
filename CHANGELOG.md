@@ -1,5 +1,20 @@
 # Changelog
 
+## Publicações 2 e 3 v01 — entrada conjunta em review
+
+### Em revisão
+
+- Publicação 2 integrada com foco na profissão e em sua definição oficial;
+- Publicação 3 integrada com as duas jornadas preservadas separadamente;
+- nove telas preservadas em cada carrossel;
+- legendas da Publicação 2 preservadas em 320, 787 e 149 caracteres;
+- legendas da Publicação 3 preservadas em 316, 625 e 149 caracteres;
+- auditoria editorial, factual e operacional conjunta concluída sem bloqueadores;
+- definição oficial e claims da Publicação 2 preservados;
+- jornadas e conversões da Publicação 3 preservadas separadamente;
+- nenhuma aprovação editorial, factual ou visual concedida;
+- CTA, URL, crosspost, design, assets, aprovação visual, agendamento e publicação preservados como gates operacionais pendentes.
+
 ## Publicação 1 v01 — aprovação editorial e factual
 
 ### Aprovado
