@@ -119,6 +119,8 @@ function checkLandingPage(file, html, script) {
   if (/\bhref=["'][^"']+\.html(?:[?#][^"']*)?["']/iu.test(html)) fail(`${display(file)}: public .html link remains`);
   if (/<script\b[^>]*\bsrc=["']config\.js["']/iu.test(html)) fail(`${display(file)}: config.js remains publicly loaded`);
   if (/<meta\b[^>]*(?:property|name)=["'](?:og:image|twitter:image)["']/iu.test(html)) fail(`${display(file)}: unapproved social image metadata`);
+  if (!/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']styles\.css\?v=[^"']+["']/iu.test(html)) fail(`${display(file)}: stylesheet reference must be cache-busted`);
+  if (!/<script\b[^>]*src=["']script\.js\?v=[^"']+["']/iu.test(html)) fail(`${display(file)}: script reference must be cache-busted`);
 
   const expectedTitle = 'Arquiteto de Operações | Profissão, disciplina e jornadas';
   const expectedDescription = 'Conheça a definição do Arquiteto de Operações, a disciplina Arquitetura Operacional, o resultado desejado Operação Previsível e as duas jornadas da categoria.';
