@@ -170,8 +170,10 @@ function checkCss(file, css) {
     if (systemsBottom < 15) fail(`${display(file)}: Tecnologia node must remain clear of the Resultado desejado card`);
     const heroGridRatio = Number(css.match(/\.hero-grid\s*\{[^}]*grid-template-columns\s*:\s*minmax\(0,([\d.]+)fr\)/u)?.[1] || 0);
     if (heroGridRatio < 1.12) fail(`${display(file)}: desktop hero copy column must support the approved two-line heading`);
-    const desktopProblemProse = /@media\s*\(\s*min-width\s*:\s*981px\s*\)[\s\S]*#problema\s*>\s*\.two-column\s+\.prose\s*\{[^}]*display\s*:\s*flex[^}]*height\s*:\s*100%[^}]*flex-direction\s*:\s*column[^}]*justify-content\s*:\s*space-between/iu;
-    if (!desktopProblemProse.test(css)) fail(`${display(file)}: desktop problem prose must fill the two-column editorial row`);
+    const desktopProblemProse = /@media\s*\(\s*min-width\s*:\s*981px\s*\)[\s\S]*#problema\s*>\s*\.two-column\s+\.prose\s*\{[^}]*display\s*:\s*grid[^}]*gap\s*:\s*var\(--space-8\)[^}]*align-content\s*:\s*start/iu;
+    if (!desktopProblemProse.test(css) || /#problema\s*>\s*\.two-column\s+\.prose\s*\{[^}]*justify-content\s*:\s*space-between/iu.test(css)) {
+      fail(`${display(file)}: desktop problem prose must stack paragraphs without distributing vertical whitespace`);
+    }
   }
 }
 

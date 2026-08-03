@@ -192,9 +192,8 @@ h1,h2,h3{margin:0;line-height:1.05;letter-spacing:-.045em}h1{max-width:780px;mar
 
 @media (min-width:981px) {
   #problema > .two-column .prose {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    gap: var(--space-8);
+    align-content: start;
   }
 }
