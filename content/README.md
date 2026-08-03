@@ -37,6 +37,22 @@ operacionais posteriores: não bloqueiam a aprovação editorial. URL e CTAs
 devem ser validados antes de `scheduled`; especificações visuais devem ser
 confirmadas antes da composição e da aprovação visual no estado `designed`.
 
+## Publicação 1 v01 — em review
+
+- **Content ID:** `pinned-post-01`
+- **Status:** `review`
+- **Versão:** `v01`
+- **Auditoria:** editorial, factual e operacional concluída sem bloqueadores em `2026-08-02`
+- **Carrossel:** `01-campaigns/pinned-posts-inaugural/pinned-post-01/carousel.md`
+- **Legenda:** `01-campaigns/pinned-posts-inaugural/pinned-post-01/caption.md`
+- **Ficha de revisão:** `01-campaigns/pinned-posts-inaugural/pinned-post-01/review-sheet.md`
+
+O conteúdo entrou em revisão sem aprovação editorial, factual ou visual. A
+legenda principal é a versão canônica de crosspost com 390 caracteres para
+Instagram, Facebook e Threads; seu limite de 400 caracteres deve ser
+revalidado antes de `scheduled`. CTA, URL de destino, especificações de
+design e assets permanecem pendentes como gates operacionais posteriores.
+
 ## Estrutura
 
 | Pasta | Finalidade |

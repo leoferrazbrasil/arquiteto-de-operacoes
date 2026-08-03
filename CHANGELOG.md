@@ -1,5 +1,18 @@
 # Changelog
 
+## Publicação 1 v01 — entrada em review
+
+### Em revisão
+
+- título “Uma nova profissão está emergindo” integrado como abertura da campanha inaugural;
+- carrossel canônico de nove telas registrado;
+- legenda canônica de crosspost preservada com 390 caracteres para Instagram, Facebook e Threads;
+- versões estendida para Instagram e micro preservadas com 788 e 169 caracteres, respectivamente;
+- claims institucionais do título e da capacidade profissional mantidos separados;
+- auditoria editorial, factual e operacional concluída sem bloqueadores;
+- nenhuma aprovação editorial, factual ou visual concedida nesta etapa;
+- CTA, URL de destino, especificações de design, assets e rechecagem do limite de 400 caracteres preservados como gates operacionais.
+
 ## Campaign Brief v1.0.0 — campanha inaugural
 
 ### Aprovado
