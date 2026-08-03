@@ -1,8 +1,11 @@
 ---
-status: review
+status: approved
 version: v01
+previous_status: review
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
+approved_by: Leonardo Brasil
+approval_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
 content_id: pinned-post-02
 campaign_id: pinned-posts-inaugural
 sequence_position: 2
@@ -18,10 +21,10 @@ CTA: "Entenda a atuação do Arquiteto de Operações."
 CTA_status: previsto_pendente_validacao_operacional
 destination: "https://leonardobrasil.com.br/arquiteto-de-operacoes"
 destination_status: previsto_pendente_validacao_operacional
-editorial_approver: ""
-factual_approver: ""
-editorial_approved_at: null
-factual_approved_at: null
+editorial_approver: Leonardo Brasil
+factual_approver: Leonardo Brasil
+editorial_approved_at: 2026-08-02
+factual_approved_at: 2026-08-02
 ---
 
 # Carrossel — O que faz um Arquiteto de Operações

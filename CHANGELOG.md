@@ -1,5 +1,18 @@
 # Changelog
 
+## Publicações 2 e 3 v01 — aprovação editorial e factual conjunta
+
+### Aprovado
+
+- auditoria editorial, factual e operacional conjunta concluída sem bloqueadores;
+- definição oficial da Publicação 2 preservada literalmente;
+- duas jornadas da Publicação 3 preservadas separadamente;
+- nove telas preservadas em cada carrossel;
+- contagens 320/787/149 e 316/625/149 preservadas;
+- sequência inaugural textual completa e aprovada em `v01`;
+- próximo estado possível definido como `designed`;
+- aprovação visual, dimensões, safe zones, assets, exports, CTA, URL, crosspost, agendamento e publicação permanecem pendentes nos respectivos gates.
+
 ## Publicações 2 e 3 v01 — entrada conjunta em review
 
 ### Em revisão

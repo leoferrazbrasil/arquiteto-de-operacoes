@@ -1,8 +1,11 @@
 ---
-status: review
+status: approved
 version: v01
+previous_status: review
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
+approved_by: Leonardo Brasil
+approval_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
 content_id: pinned-post-02
 campaign_id: pinned-posts-inaugural
 sequence_position: 2
@@ -10,12 +13,15 @@ title: "O que faz um Arquiteto de Operações"
 channel: Instagram
 format: carousel
 artifact_type: review_sheet
-current_status: review
-recommended_next_status: review
-editorial_approver: ""
-factual_approver: ""
-editorial_approved_at: null
-factual_approved_at: null
+current_status: approved
+recommended_next_status: designed
+review_result: approved
+editorial_approval: approved
+factual_approval: approved
+editorial_approver: Leonardo Brasil
+factual_approver: Leonardo Brasil
+editorial_approved_at: 2026-08-02
+factual_approved_at: 2026-08-02
 visual_approver: ""
 visual_approved_at: null
 ---
@@ -179,13 +185,14 @@ Os gates acima não bloqueiam revisão editorial, revisão factual ou `approved`
 
 | Campo | Registro |
 | --- | --- |
-| Autoridade editorial prevista | Leonardo Brasil |
-| Aprovação editorial |  |
-| Data da aprovação editorial |  |
-| Autoridade factual prevista | Leonardo Brasil |
-| Aprovação factual |  |
-| Data da aprovação factual |  |
+| Autoridade editorial | Leonardo Brasil |
+| Aprovação editorial | `approved` |
+| Data da aprovação editorial | `2026-08-02` |
+| Autoridade factual | Leonardo Brasil |
+| Aprovação factual | `approved` |
+| Data da aprovação factual | `2026-08-02` |
+| Aprovação visual | não concedida |
 
 ## 13. Recomendação de estado
 
-**Recomendação:** avançar de `draft` para `review`. As validações editoriais, factuais e de contagem estão conformes nesta versão. Não registrar `approved` antes das decisões editorial e factual de Leonardo Brasil.
+**Estado anterior:** `review`. **Estado atual:** `approved`. A auditoria conjunta foi concluída sem bloqueadores e as aprovações editorial e factual foram registradas por Leonardo Brasil. **Próximo estado possível:** `designed`, condicionado aos gates visuais aplicáveis. Nenhuma aprovação visual foi concedida.

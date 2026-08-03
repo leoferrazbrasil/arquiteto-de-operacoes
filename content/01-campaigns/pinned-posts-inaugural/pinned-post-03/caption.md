@@ -1,8 +1,11 @@
 ---
-status: review
+status: approved
 version: v01
+previous_status: review
 review_started_at: 2026-08-02
 review_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
+approved_by: Leonardo Brasil
+approval_basis: auditoria editorial, factual e operacional conjunta concluída sem bloqueadores
 content_id: pinned-post-03
 campaign_id: pinned-posts-inaugural
 sequence_position: 3
@@ -26,10 +29,10 @@ destination: "https://leonardobrasil.com.br/arquiteto-de-operacoes"
 destination_status: previsto_pendente_validacao_operacional
 operational_rule_status: verified_for_current_workflow
 operational_rule_verified_at: 2026-08-02
-editorial_approver: ""
-factual_approver: ""
-editorial_approved_at: null
-factual_approved_at: null
+editorial_approver: Leonardo Brasil
+factual_approver: Leonardo Brasil
+editorial_approved_at: 2026-08-02
+factual_approved_at: 2026-08-02
 ---
 
 # Legendas — Profissionais e empresas: as duas jornadas
@@ -48,7 +51,7 @@ Legenda principal e canônica para publicação simultânea no fluxo atual.
 ```yaml
 caption_id: caption_crosspost_400
 canonical: true
-status: draft
+status: approved
 version: v01
 character_limit_total: 400
 character_count_total: 316
@@ -98,7 +101,7 @@ Versão longa opcional, utilizável somente quando a publicação simultânea fo
 ```yaml
 caption_id: caption_instagram_extended
 canonical: false
-status: draft
+status: approved
 version: v01
 usage: somente quando a publicação simultânea for deliberadamente desativada
 character_count_total: 625
@@ -140,7 +143,7 @@ Versão de apoio entre 120 e 180 caracteres. Não substitui automaticamente `cap
 ```yaml
 caption_id: caption_micro
 canonical: false
-status: draft
+status: approved
 version: v01
 character_minimum: 120
 character_maximum: 180
