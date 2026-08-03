@@ -84,6 +84,35 @@ function checkCss(file, css) {
   if ((stripped.match(/\(/gu) || []).length !== (stripped.match(/\)/gu) || []).length) fail(`${display(file)}: unbalanced CSS parentheses`);
 }
 
+function checkDeployWorkflow(file, workflow) {
+  const push = workflow.match(/^  push:\s*\n(?<body>[\s\S]*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:)/mu);
+  const paths = push?.groups?.body.match(/^    paths:\s*\n(?<body>(?:^      - .+\n?)+)/mu);
+  if (!paths) {
+    fail(`${display(file)}: push trigger must limit deploys to public package inputs`);
+    return;
+  }
+
+  const configured = new Set([...paths.groups.body.matchAll(/^      -\s+['"]?([^'"\n]+)['"]?\s*$/gmu)].map(([, path]) => path));
+  const publicInputs = [
+    'index.html',
+    'privacy.html',
+    'admin.html',
+    'styleguide.html',
+    'styles.css',
+    'script.js',
+    'config.js',
+    'tokens.json',
+    'assets/**',
+    'data/**'
+  ];
+  for (const input of publicInputs) {
+    if (!configured.has(input)) fail(`${display(file)}: deploy trigger does not cover ${input}`);
+  }
+  for (const editorialOnly of ['content/**', 'CHANGELOG.md', 'README.md']) {
+    if (configured.has(editorialOnly)) fail(`${display(file)}: editorial-only path must not trigger deploy: ${editorialOnly}`);
+  }
+}
+
 function checkSvgXml(svgDirectory) {
   const command = `$files=Get-ChildItem -LiteralPath '${svgDirectory.replaceAll("'", "''")}' -Recurse -Filter *.svg; foreach($file in $files){[xml](Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8)|Out-Null}`;
   const result = process.platform === 'win32'
@@ -122,6 +151,10 @@ for (const name of ['tokens.json', 'data/form-fields.json']) {
 
 const svgDirectory = join(root, 'assets');
 checkSvgXml(svgDirectory);
+
+const deployWorkflow = join(root, '.github', 'workflows', 'deploy-subpath.yml');
+if (existsSync(deployWorkflow)) checkDeployWorkflow(deployWorkflow, readUtf8(deployWorkflow));
+else fail('missing deploy workflow');
 
 const canonical = join(root, 'assets', 'brand', 'h5-2-a');
 const requiredCanonical = [

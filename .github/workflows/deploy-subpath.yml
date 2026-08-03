@@ -4,6 +4,17 @@ on:
   push:
     branches:
       - main
+    paths:
+      - index.html
+      - privacy.html
+      - admin.html
+      - styleguide.html
+      - styles.css
+      - script.js
+      - config.js
+      - tokens.json
+      - assets/**
+      - data/**
   workflow_dispatch:
 
 permissions:
